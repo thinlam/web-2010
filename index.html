@@ -1,191 +1,233 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>20/10 — Lời chúc dành cho Em</title>
-  <meta name="description" content="Thiệp web 20/10 cảm động, tinh tế và chuyên nghiệp. Hiệu ứng mượt và linh vật khỉ đeo băng-rôn 20/10." />
-  <meta property="og:title" content="20/10 — Lời chúc dành cho Em" />
-  <meta property="og:description" content="Thiệp web 20/10 cảm động, tinh tế và chuyên nghiệp. Hiệu ứng mượt và linh vật khỉ đeo băng-rôn 20/10." />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#fb7185" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg1:#fff1f2; --bg2:#ffe4e6; --primary:#e11d48; --accent:#fb7185; --ink:#0f172a; --muted:#475569;
-      --glass:rgba(255,255,255,.65);
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; color:var(--ink);
-      background:
-        radial-gradient(1000px 600px at 20% 10%,var(--bg2),transparent),
-        radial-gradient(1000px 700px at 80% 0%,#ffe7f1,transparent),
-        linear-gradient(180deg,var(--bg1),#fff);
-      overflow-x:hidden}
-    .grid{position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(to right,rgba(15,23,42,.06) 1px,transparent 1px),linear-gradient(to bottom,rgba(15,23,42,.06) 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(80% 50% at 50% 40%,#000 60%,transparent)}
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>💓 Lá thư 20/10 tặng Em</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --rose:#f43f5e;
+  --rose-deep:#e11d48;
+  --paper:#fffafc;
+  --shadow:0 8px 30px rgba(0,0,0,0.12);
+}
+body {
+  margin:0;
+  font-family:Inter,sans-serif;
+  background:linear-gradient(180deg,#fff0f6,#ffe4e6);
+  overflow-x:hidden;
+  color:#1f2937;
+  scroll-behavior:smooth;
+}
 
-    .container{min-height:100%;display:flex;align-items:center;justify-content:center;padding:32px}
-    .card{position:relative;max-width:960px;width:100%;border-radius:30px;padding:34px; background:var(--glass);backdrop-filter:blur(12px);box-shadow:0 24px 60px rgba(15,23,42,.12); border:1px solid rgba(255,255,255,.5);overflow:hidden}
+/* 🌸 Hoa anh đào bay */
+.petal {
+  position:fixed;
+  top:-40px;
+  width:22px;height:16px;
+  background:radial-gradient(circle at 30% 30%,#fff,#ffc0cb 40%,#fda4af);
+  border-radius:60% 70% 60% 70%/100% 100% 60% 60%;
+  opacity:.8;
+  transform:rotate(15deg);
+  animation:fall linear infinite;
+  filter:blur(0.4px);
+  z-index:1;
+}
+@keyframes fall {
+  0% {transform:translate3d(var(--x),0,0) rotate(0deg);}
+  100% {transform:translate3d(var(--x),110vh,0) rotate(540deg);}
+}
 
-    .header{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
-    .tag{display:inline-flex;gap:8px;align-items:center;padding:8px 14px;border-radius:999px;background:#fff;box-shadow:0 6px 18px rgba(251,113,133,.25);border:1px solid rgba(251,113,133,.4);color:#9f1239;font-weight:700;letter-spacing:.02em}
-    h1{font-family:"Playfair Display",serif;font-weight:700;line-height:1.08;margin:12px 0 6px;font-size:clamp(36px,5vw,56px);background:linear-gradient(180deg,#be123c,#f43f5e 40%,#fb7185);-webkit-background-clip:text;color:transparent}
-    .lead{font-size:18px;color:var(--muted);max-width:60ch}
+/* 💌 Phong bì */
+.envelope {
+  position:relative;
+  width:min(520px,90%);
+  height:360px;
+  margin:100px auto 60px;
+  border-radius:20px;
+  background:linear-gradient(180deg,#ffe4ec,#fecdd3);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  perspective:900px;
+}
+.envelope::before {
+  content:"";
+  position:absolute;top:0;left:0;right:0;
+  height:60%;
+  background:linear-gradient(180deg,#f9a8d4,#fda4af);
+  clip-path:polygon(0 0,100% 0,50% 100%);
+  transform-origin:top;
+  box-shadow:0 6px 20px rgba(0,0,0,.08);
+  transition:transform 1s cubic-bezier(.2,.8,.2,1);
+}
+.envelope.open::before {transform:rotateX(180deg);}
+.letter {
+  position:absolute;inset:0;
+  background:var(--paper);
+  border-radius:16px;
+  margin:28px;
+  box-shadow:0 10px 26px rgba(0,0,0,.08);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  transition:all .6s ease;
+}
+.envelope.open .letter {opacity:0;transform:translateY(-80px);}
 
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:center;margin-top:8px}
-    @media (max-width:860px){.hero{grid-template-columns:1fr}}
+/* ✉️ Nội dung lá thư */
+.letter h1 {
+  font-family:"Playfair Display",serif;
+  font-size:clamp(28px,4vw,40px);
+  background:linear-gradient(180deg,var(--rose-deep),var(--rose));
+  -webkit-background-clip:text;color:transparent;
+  margin-bottom:12px;
+}
+.letter p {color:#475569;margin-bottom:20px;max-width:48ch;}
+.open-btn {
+  font-size:17px;
+  font-weight:700;
+  padding:14px 32px;
+  border:none;
+  border-radius:12px;
+  background:linear-gradient(90deg,#f43f5e,#ec4899,#f59e0b);
+  background-size:200% auto;
+  color:#fff;
+  box-shadow:0 10px 20px rgba(244,63,94,.25);
+  cursor:pointer;
+  transition:background-position .8s ease,transform .2s ease;
+}
+.open-btn:hover {background-position:100% center;transform:translateY(-2px);}
 
-    .mascot-wrap{display:grid;place-items:center;padding:12px}
-    .mascot{width:min(420px,80vw);aspect-ratio:1/1}
-    .mascot:hover{transform:translateY(-2px);}
-    .content{margin-top:8px;font-size:18px;line-height:1.75}
-    .content p{margin:0 0 12px}
-    .bullets{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:8px 0 6px}
-    .chip{padding:10px 14px;border-radius:14px;background:#fff;border:1px solid #ffe4e6;box-shadow:0 6px 20px rgba(244,63,94,.08);font-weight:700;color:#9f1239}
-    .sig{margin-top:10px;color:#9f1239;font-weight:700}
+/* 🌷 Thiệp */
+.card {
+  display:none;
+  max-width:880px;
+  background:rgba(255,255,255,.96);
+  border-radius:26px;
+  margin:40px auto 100px;
+  padding:48px 38px;
+  box-shadow:var(--shadow);
+  animation:fadeIn 1.2s ease;
+  position:relative;
+  overflow:hidden;
+  text-align:center;
+}
+.card.show {display:block;}
+@keyframes fadeIn {from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:none;}}
 
-    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
-    button{appearance:none;border:none;padding:12px 16px;border-radius:12px;font-weight:800;cursor:pointer}
-    .btn{background:linear-gradient(180deg,#f43f5e,#e11d48);color:#fff;box-shadow:0 12px 24px rgba(225,29,72,.28)}
-    .ghost{background:#fff;color:#9f1239;border:1px solid #fecdd3}
+/* 💖 Trái tim SVG chuẩn */
+.heart-container {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:24px;
+}
+.heart {
+  width:160px;
+  height:auto;
+  animation:heartbeat 1.25s infinite ease-in-out;
+  filter:drop-shadow(0 0 25px rgba(255,128,150,0.5));
+}
+@keyframes heartbeat {
+  0%,100% {transform:scale(1);}
+  50% {transform:scale(1.15);}
+}
 
-    .footer{margin-top:16px;font-size:14px;color:#64748b}
+/* 🌸 Hoa quanh card */
+.flower {
+  position:absolute;
+  width:34px;height:34px;
+  background:radial-gradient(circle,#fff,#f9a8d4);
+  border-radius:50%;
+  opacity:.7;
+  animation:spin 14s linear infinite;
+}
+@keyframes spin {
+  0%{transform:rotate(0deg) translate(160px) rotate(0deg);}
+  100%{transform:rotate(360deg) translate(160px) rotate(-360deg);}
+}
 
-    /* petals */
-    .petal{position:fixed;top:-40px;width:16px;height:10px;background:radial-gradient(circle at 30% 30%,#fff 0 20%,#fecdd3 21% 100%);border-radius:60% 60% 60% 60%/100% 100% 40% 40%;opacity:.75;filter:drop-shadow(0 2px 4px rgba(244,63,94,.25));animation:fall linear forwards}
-    @keyframes fall{to{transform:translate3d(var(--x,0),110vh,0) rotate(540deg)}}
-
-    /* celebration canvas */
-    #fx{position:fixed;inset:0;pointer-events:none}
-  </style>
+.card h2 {
+  font-family:"Playfair Display",serif;
+  font-size:clamp(28px,4vw,44px);
+  color:var(--rose-deep);
+  margin-top:0;
+}
+.card p {
+  font-size:18px;
+  line-height:1.85;
+  color:#334155;
+  margin:10px 0;
+}
+.card b {color:var(--rose-deep);}
+</style>
 </head>
 <body>
-  <canvas id="fx"></canvas>
-  <div class="grid" aria-hidden="true"></div>
-  <div class="container">
-    <main class="card" role="main">
-      <div class="header">
-        <span class="tag">🌸 20/10 • Vietnamese Women's Day</span>
-        <h1 id="title">Gửi Em — người làm tháng Mười dịu lại</h1>
-        <p class="lead" id="lead">Mỗi ngày trôi qua, Em đều âm thầm thêm vào cuộc đời này một chút dịu dàng. Hôm nay, anh chỉ muốn nói: Em xứng đáng với mọi điều đẹp nhất.</p>
-      </div>
 
-      <div class="hero">
-        <section class="content" id="content">
-          <p>Em không cần phải mạnh mẽ mọi lúc. Hãy cho phép mình chậm lại một nhịp — phần còn lại, để anh lo. Vì <strong>từ bây giờ, hạnh phúc của Em là ưu tiên của anh</strong>.</p>
-          <div class="bullets">
-            <div class="chip">Biết ơn vì Em luôn tử tế</div>
-            <div class="chip">Tự hào vì Em bền bỉ</div>
-            <div class="chip">Trân trọng ánh mắt Em khi cười</div>
-            <div class="chip">Và cả những ngày Em thấy mệt</div>
-          </div>
-          <p class="sig" id="sig">— Từ anh, người luôn đứng về phía Em</p>
+<!-- 🌸 Cánh hoa rơi -->
+<script>
+const rand=(a,b)=>Math.random()*(b-a)+a;
+for(let i=0;i<50;i++){
+  const p=document.createElement('div');
+  p.className='petal';
+  p.style.left=rand(0,100)+'vw';
+  p.style.setProperty('--x',rand(-50,50)+'vw');
+  p.style.animationDuration=rand(12,24)+'s';
+  p.style.animationDelay=rand(-10,0)+'s';
+  document.body.appendChild(p);
+}
+</script>
 
-          <div class="actions">
-            <button class="btn" id="openCard">Mở thiệp ✨</button>
-            <button class="ghost" id="printBtn">In / Lưu PDF</button>
-          </div>
-        </section>
+<div class="envelope" id="env">
+  <div class="letter">
+    <h1>Gửi Em — người làm tháng Mười dịu lại</h1>
+    <p>Mỗi ngày trôi qua, Em đều âm thầm thêm vào cuộc đời này một chút dịu dàng.</p>
+    <button class="open-btn" id="openBtn">💌 Mở lá thư</button>
+  </div>
+</div>
 
-        <div class="mascot-wrap" aria-hidden="true">
-          <!-- SVG Linh vật khỉ đeo băng-rôn 20/10 -->
-          <svg class="mascot" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
-                <stop offset="0" stop-color="#fda4af"/>
-                <stop offset="1" stop-color="#fb7185"/>
-              </linearGradient>
-              <linearGradient id="fur" x1="0" x2="0" y1="0" y2="1">
-                <stop offset="0" stop-color="#a16207"/>
-                <stop offset="1" stop-color="#b45309"/>
-              </linearGradient>
-            </defs>
-            <!-- nền tròn -->
-            <circle cx="160" cy="160" r="150" fill="url(#g1)" opacity=".25"/>
-            <!-- thân khỉ -->
-            <ellipse cx="160" cy="190" rx="70" ry="85" fill="url(#fur)"/>
-            <circle cx="120" cy="140" r="28" fill="#fed7aa"/>
-            <circle cx="200" cy="140" r="28" fill="#fed7aa"/>
-            <ellipse cx="160" cy="165" rx="50" ry="45" fill="#fed7aa"/>
-            <!-- tai -->
-            <circle cx="90" cy="120" r="20" fill="#f59e0b"/><circle cx="230" cy="120" r="20" fill="#f59e0b"/>
-            <!-- mắt & miệng -->
-            <circle cx="145" cy="150" r="6" fill="#0f172a"/>
-            <circle cx="175" cy="150" r="6" fill="#0f172a"/>
-            <path d="M140 172c8 12 32 12 40 0" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
-            <!-- băng-rôn 20/10 -->
-            <path d="M64 200c60-20 130-20 192 0" stroke="#e11d48" stroke-width="22" stroke-linecap="round"/>
-            <text x="160" y="205" text-anchor="middle" font-family="Inter, system-ui" font-size="26" font-weight="800" fill="#fff">20/10</text>
-            <!-- tay khỉ cầm băng -->
-            <circle cx="96" cy="198" r="14" fill="#b45309"/>
-            <circle cx="224" cy="198" r="14" fill="#b45309"/>
-            <!-- trái tim nhỏ -->
-            <path d="M250 80c6-10 20-10 26 0 6 10-6 22-13 26-7-4-19-16-13-26z" fill="#e11d48"/>
-          </svg>
-        </div>
-      </div>
-
-      <div class="footer">Made with ♥ • Thiết kế tối giản, hiệu ứng mượt trên mọi thiết bị</div>
-    </main>
+<section class="card" id="card">
+  <div class="heart-container">
+    <svg class="heart" viewBox="0 0 1024 900" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#fb7185"/>
+          <stop offset="100%" stop-color="#e11d48"/>
+        </linearGradient>
+      </defs>
+      <path d="M512 850s-400-240-400-530c0-130 100-220 220-220 90 0 150 60 180 110 30-50 90-110 180-110 120 0 220 90 220 220 0 290-400 530-400 530z" fill="url(#heartGradient)"/>
+    </svg>
   </div>
 
-  <script>
-    // Petals falling
-    const rand=(a,b)=>Math.random()*(b-a)+a;
-    for(let i=0;i<40;i++){
-      const p=document.createElement('div');
-      p.className='petal'; p.style.left=rand(0,100)+'vw'; p.style.setProperty('--x', rand(-60,60)+'vw');
-      p.style.animationDuration=rand(8,18)+'s'; p.style.animationDelay=rand(-10,4)+'s';
-      document.body.appendChild(p);
-    }
+  <h2>Tấm thiệp 20/10 dành riêng cho Em</h2>
+  <p>Anh không có hoa, cũng chẳng có quà, chỉ có một lời xin lỗi — vì những lúc làm em buồn.</p>
+  <p>Nhưng anh vẫn muốn nói: cảm ơn em, vì đã đến bên anh, vì đã chọn ở lại dù anh chẳng có gì ngoài đôi bàn tay và tấm lòng thật.</p>
+  <p>Cảm ơn người con gái không ngại khó khăn để làm người con gái của anh. Cảm ơn vì em luôn dịu dàng trong những ngày mệt mỏi nhất, vì vẫn tin vào anh – dù đôi khi anh còn vụng về và chậm hiểu.</p>
+  <p>Anh biết mình chưa đủ giỏi để cho em những điều lấp lánh, nhưng anh luôn cố gắng từng chút, để em thấy rằng bên anh – không cần mạnh mẽ, chỉ cần là chính em.</p>
+  <p><b>Hãy cho phép mình chậm lại một nhịp thôi, phần còn lại – để anh lo.</b></p>
+  <p style="font-weight:700;color:var(--rose-deep);">— Từ anh, người luôn đứng về phía Em</p>
 
-    // Personalization via URL params
-    const params=new URLSearchParams(location.search);
-    const set=(id,text)=>{ const el=document.getElementById(id); if(text && el) el.textContent=text; };
-    const htmlSet=(id,html)=>{ const el=document.getElementById(id); if(html && el) el.innerHTML=html; };
-    const to=params.get('to'), from=params.get('from'), title=params.get('title'), lead=params.get('lead'), msg=params.get('msg');
-    if(title) set('title', title); if(lead) set('lead', lead); if(msg) htmlSet('content', msg.replaceAll('\n','<br/>'));
-    if(to||from){ const sign=`— ${from||'Từ anh'}, người luôn đứng về phía ${to||'Em'}`; set('sig', sign); }
+  <div class="flower" style="top:-20px;left:50%;animation-delay:0s;"></div>
+  <div class="flower" style="top:40%;left:-40px;animation-delay:2s;"></div>
+  <div class="flower" style="bottom:-20px;right:50%;animation-delay:4s;"></div>
+  <div class="flower" style="top:20%;right:-40px;animation-delay:6s;"></div>
+</section>
 
-    // Celebration FX (hearts & confetti) when opening the card
-    const canvas=document.getElementById('fx'); const ctx=canvas.getContext('2d');
-    const DPR=window.devicePixelRatio||1; let W=0,H=0; function resize(){W=canvas.width=innerWidth*DPR;H=canvas.height=innerHeight*DPR; canvas.style.width=innerWidth+'px'; canvas.style.height=innerHeight+'px';} resize(); addEventListener('resize',resize);
+<script>
+const env=document.getElementById('env');
+const card=document.getElementById('card');
+const btn=document.getElementById('openBtn');
+function openLetter(){
+  if(env.classList.contains('open'))return;
+  env.classList.add('open');
+  setTimeout(()=>{card.classList.add('show');window.scrollTo({top:env.offsetTop+200,behavior:'smooth'});},1000);
+}
+env.addEventListener('click',openLetter);
+btn.addEventListener('click',e=>{e.stopPropagation();openLetter();});
+</script>
 
-    const particles=[]; const colors=['#e11d48','#fb7185','#f59e0b','#10b981'];
-    function heart(x,y,s){ ctx.save(); ctx.translate(x,y); ctx.scale(s,s); ctx.beginPath(); ctx.moveTo(0,6); ctx.bezierCurveTo(0,-4,-12,-4,-12,6); ctx.bezierCurveTo(-12,14,-4,18,0,22); ctx.bezierCurveTo(4,18,12,14,12,6); ctx.bezierCurveTo(12,-4,0,-4,0,6); ctx.fill(); ctx.restore(); }
-    function square(x,y,s){ ctx.save(); ctx.translate(x,y); ctx.rotate(s*0.2); ctx.fillRect(-s/2,-s/2,s,s); ctx.restore(); }
-
-    function spawnBurst(x,y){
-      for(let i=0;i<120;i++){
-        const ang=Math.random()*Math.PI*2; const sp=rand(1,4)*DPR; const vx=Math.cos(ang)*sp, vy=Math.sin(ang)*sp;
-        particles.push({x:x*DPR,y:y*DPR,vx,vy,life:rand(60,140),shape:Math.random()<.6?'heart':'square',size:rand(8,18)*DPR,color:colors[(Math.random()*colors.length)|0]});
-      }
-    }
-
-    function tick(){
-      ctx.clearRect(0,0,W,H);
-      particles.forEach(p=>{
-        p.vy+=0.05*DPR; p.x+=p.vx; p.y+=p.vy; p.life-=1; ctx.globalAlpha=Math.max(p.life/140,0);
-        ctx.fillStyle=p.color; if(p.shape==='heart') heart(p.x,p.y,p.size/24); else square(p.x,p.y,p.size);
-      });
-      for(let i=particles.length-1;i>=0;i--) if(particles[i].life<=0||particles[i].y>H+40*DPR) particles.splice(i,1);
-      requestAnimationFrame(tick);
-    }
-    tick();
-
-    const openBtn=document.getElementById('openCard');
-    openBtn.addEventListener('click',()=>{
-      const rect=openBtn.getBoundingClientRect(); spawnBurst(rect.left+rect.width/2, rect.top+rect.height/2);
-      // nhẹ nhàng rung linh vật
-      const m=document.querySelector('.mascot'); m.animate([{transform:'translateY(0)'},{transform:'translateY(-6px) rotate(-2deg)'},{transform:'translateY(0)'}],{duration:600,easing:'cubic-bezier(.2,.8,.2,1)'});
-      // đổi nút thành "Đã mở" một lát
-      openBtn.disabled=true; openBtn.textContent='Chúc Em một 20/10 thật dịu dàng ♥'; setTimeout(()=>{openBtn.disabled=false; openBtn.textContent='Mở lại thiệp ✨';},1800);
-    });
-
-    document.getElementById('printBtn').addEventListener('click',()=>window.print());
-  </script>
 </body>
 </html>
